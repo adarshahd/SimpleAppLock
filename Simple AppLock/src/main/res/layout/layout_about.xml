@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#195893">
+
+    <ImageView
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/welcome"
+        android:layout_marginTop="50dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simple AppLock"
+        android:textSize="32sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:padding="10dp"/>
+    <TextView
+        android:id="@+id/id_tv_about_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Version: "
+        android:textColor="@android:color/white"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:padding="10dp"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Support: support.simpleapplock@adarshahd.net"
+        android:gravity="center"
+        android:autoLink="email"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

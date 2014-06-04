@@ -1,0 +1,60 @@
+buildscript {
+    repositories {
+        maven { url 'http://download.crashlytics.com/maven' }
+    }
+
+    dependencies {
+        classpath 'com.crashlytics.tools.gradle:crashlytics-gradle:1.+'
+    }
+}
+apply plugin: 'android'
+apply plugin: 'crashlytics'
+android {
+    compileSdkVersion 19
+    buildToolsVersion '19.0.3'
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 19
+<<<<<<< HEAD
+        versionCode 5
+        versionName "0.9.3"
+=======
+        versionCode 6
+        versionName "1.0"
+>>>>>>> master
+    }
+
+    signingConfigs {
+        releaseConfig {
+            storeFile file('/home/ahd/git/SimpleAppLock/my-key.keystore')
+            storePassword "Horabail&"
+            keyAlias "my-key"
+            keyPassword "Horabail&"
+        }
+    }
+
+    buildTypes {
+        release {
+            runProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.releaseConfig
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':LockPattern')
+    compile project(':UndoBar')
+    compile 'com.android.support:appcompat-v7:19.+'
+    compile 'com.android.support:support-v4:+'
+    compile 'com.google.android.gms:play-services:4.3.23'
+    compile 'com.crashlytics.android:crashlytics:1.+'
+}
+
+repositories {
+    maven { url 'http://download.crashlytics.com/maven' }
+}

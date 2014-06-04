@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="UNLOCK">
+        <Preference
+            android:key="unlock_method"
+            android:title="Unlock method"
+            android:summary="@string/unlock_with_pin"/>
+        <CheckBoxPreference
+            android:key="enable_timer"
+            android:title="Timer"
+            android:summary="You need not unlock the app for the specified time once you unlock"
+            android:defaultValue="false" />
+        <ListPreference
+            android:key="timer_value"
+            android:title="Timer window"
+            android:dependency="enable_timer"
+            android:defaultValue="10"
+            android:entries="@array/timer_window"
+            android:entryValues="@array/timer_window_values"
+            android:summary="10 seconds"/>
+        <CheckBoxPreference
+            android:key="in_call"
+            android:title="Lock Incoming Calls"
+            android:summary="You should unlock before receiving incoming calls. Works only when dialer is added to AppLock"
+            android:defaultValue="false" />
+        <CheckBoxPreference
+            android:key="lock_uninstall"
+            android:title="Lock App Uninstalls"
+            android:summary="Lock uninstall of applications."
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="General">
+
+        <CheckBoxPreference
+            android:title="Startup"
+            android:summary="Start AppLock when the device starts"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Premium Features">
+        <CheckBoxPreference
+            android:key="adv_prot"
+            android:title="Advanced Protection"
+            android:enabled="false"
+            android:summary="Advanced Protection for Simple AppLock" />
+        <Preference
+            android:key="upgrade"
+            android:title="Upgrade"
+            android:summary="Go premium to get extra set of features" />
+        <Preference
+            android:key="restore_purchase"
+            android:title="Restore Purchases"
+            android:summary="Restore any previously purchased items" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="About">
+        <Preference
+            android:title="About this application"
+            android:key="about"/>
+        <Preference
+            android:title="Rate"
+            android:summary="Please consider rating my app at Google Play!"
+            android:key="rate"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

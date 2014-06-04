@@ -1,0 +1,246 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.gigathinking.simpleapplock.UnlockWithPIN">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/id_ll_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_icon_unlock"
+                android:layout_width="72dp"
+                android:src="@drawable/ic_launcher"
+                android:layout_height="72dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY" />
+            <TextView
+                android:id="@+id/tv_app_unlock"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_unlock_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:gravity="center"
+            android:text="@string/app_loked_pin"/>
+        <Button
+            android:id="@+id/id_btn_forgot_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:text="@string/forgot_pin"
+            android:background="@drawable/button_selector" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".8"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pass"
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxLength="4"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:password="true"
+                android:background="#00000000" />
+
+            <ImageButton
+                android:id="@+id/backspace"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/button_selector"
+                android:src="@drawable/backspace"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:padding="2dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="#DDD" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp">
+
+                <Button
+                    android:id="@+id/one"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/button_unlock_selector"
+                    android:textColor="@android:color/white"
+                    android:layout_marginRight="5dp"
+                    android:text="1"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/two"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/button_unlock_selector"
+                    android:textColor="@android:color/white"
+                    android:layout_marginRight="5dp"
+                    android:text="2"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/three"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/button_unlock_selector"
+                    android:textColor="@android:color/white"
+                    android:text="3"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp">
+
+                <Button
+                    android:id="@+id/four"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/button_unlock_selector"
+                    android:textColor="@android:color/white"
+                    android:layout_marginRight="5dp"
+                    android:text="4"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/five"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/button_unlock_selector"
+                    android:textColor="@android:color/white"
+                    android:layout_marginRight="5dp"
+                    android:text="5"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/six"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/button_unlock_selector"
+                    android:textColor="@android:color/white"
+                    android:text="6"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp">
+
+                <Button
+                    android:id="@+id/seven"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/button_unlock_selector"
+                    android:textColor="@android:color/white"
+                    android:layout_marginRight="5dp"
+                    android:text="7"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/eight"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/button_unlock_selector"
+                    android:layout_marginRight="5dp"
+                    android:text="8"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/nine"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/button_unlock_selector"
+                    android:textColor="@android:color/white"
+                    android:text="9"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:visibility="invisible"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/zero"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:text="0"
+                    android:background="@drawable/button_unlock_selector"
+                    android:textColor="@android:color/white"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:visibility="invisible"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

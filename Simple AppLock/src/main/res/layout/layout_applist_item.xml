@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/checked_item_indicator"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/iv_app_icon"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_launcher"
+        android:layout_gravity="center"
+        android:padding="5dp"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="6"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:focusable="false"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:focusable="false"
+            android:descendantFocusability="blocksDescendants">
+
+            <ImageButton
+                android:id="@+id/btn_lock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:src="@drawable/lock"
+                android:padding="5dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:contentDescription="Toggle Lock"/>
+            <ImageButton
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_action_delete"
+                android:padding="5dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:contentDescription="Delete"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

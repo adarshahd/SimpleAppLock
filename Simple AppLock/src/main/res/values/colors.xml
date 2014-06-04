@@ -1,0 +1,10 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="activeBackground">#0099cc</color>
+    <color name="buttonSelector">#224b69</color>
+    <color name="background_list_apps">#224b69</color>
+    <color name="button_welcome">#195893</color>
+    <color name="orange_paging">#ffdd713f</color>
+
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gigathinking.simpleapplock" >
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <permission
+        android:name="com.gigathinking.simpleapplock.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.gigathinking.simpleapplock.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Simpleapplock" >
+        <activity
+            android:name="com.gigathinking.simpleapplock.MainActivity"
+            android:label="@string/title_activity_layout_main" >
+        </activity>
+        <activity
+            android:name="com.gigathinking.simpleapplock.AppPicker"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity
+            android:name="com.gigathinking.simpleapplock.SetupPINLock" />
+        <activity
+            android:name="com.gigathinking.simpleapplock.UnlockWithGesture" />
+        <activity
+            android:name="com.gigathinking.simpleapplock.SetupGestureLock" />
+        <activity
+            android:name="com.gigathinking.simpleapplock.PrefActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden" />
+        <activity
+            android:name="com.haibison.android.lockpattern.LockPatternActivity"
+            android:screenOrientation="user"
+            android:theme="@style/Alp.42447968.Theme.Light.DarkActionBar" />
+
+        <service
+            android:name="com.gigathinking.simpleapplock.AppLaunchDetectorService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name="com.gigathinking.simpleapplock.UnlockWithPIN" >
+        </activity>
+
+        <receiver
+            android:name="com.gigathinking.simpleapplock.BootReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.gigathinking.simpleapplock.ResetUnlockMethod"
+            android:label="@string/title_activity_reset_unlock_method" >
+        </activity>
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+        <receiver
+            android:name="com.gigathinking.simpleapplock.ResetUnlockReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.gigathinking.simpleapplock" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.gigathinking.simpleapplock.AdvancedProtection"
+            android:description="@string/advanced_protection"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.gigathinking.simpleapplock.Upgrade"
+            android:label="@string/title_activity_upgrade" >
+        </activity>
+        <activity
+            android:name="com.gigathinking.simpleapplock.Welcome"
+            android:label="@string/title_activity_layout_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.gigathinking.simpleapplock.About" />
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="YOUR KEY"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Simple AppLock</string>
+    <string name="title_activity_layout_main">Simple AppLock</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_unlock_with_pin">Simple AppLock</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="delete_message">Are you sure want to remove this app from tracking?</string>
+    <string name="pin_do_not_match_message">The PIN you entered do not match. Please re-enter a PIN</string>
+    <string name="pin_do_not_match">PIN do not match</string>
+    <string name="pin_set">Unlock PIN set!</string>
+    <string name="pin_confirm">Confirm your PIN</string>
+    <string name="create_pin">Before you start adding apps, please enter a PIN</string>
+    <string name="create_gesture">Before you start adding apps, please setup gesture lock</string>
+    <string name="confirm_gesture">Confirm your gesture</string>
+    <string name="gesture_set">Gesture lock set!</string>
+    <string name="gesture_dont_match">Gesture do not match</string>
+    <string name="gesture_dont_match_message">The gesture you drawn do not match. Please redraw a gesture</string>
+    <string name="unlock_self_gesture">Draw the gesture to unlock</string>
+    <string name="unlock_self_pin">Enter PIN to unlock</string>
+    <string name="app_list">App List</string>
+    <string name="prefs">Preferences</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="about">About</string>
+    <string name="gesture_invalid">Invalid Gesture</string>
+    <string name="unlocked">Unlocked !</string>
+    <string name="pin_invalid">Invalid PIN</string>
+    <string name="unlock_with_pin">Unlock with PIN selected</string>
+    <string name="unlock_with_gesture">Unlock with gesture selected</string>
+    <string name="unlock_with_pattern">Unlock with pattern selected</string>
+    <string name="change_gesture">Create new gesture</string>
+    <string name="change_pin">Create new PIN</string>
+    <string name="select_none">Select none</string>
+    <string name="select_all">Select all</string>
+    <string name="lock_message"> is now locked</string>
+    <string name="unlock_message"> is now unlocked</string>
+    <string name="message_initial_start">Tap to setup an unlock method and add apps to Simple AppLock</string>
+    <string name="message_no_apps">\nAdd new apps to Simple AppLock\n</string>
+    <string name="advanced_protection">Advanced Protection for Simple AppLock.</string>
+
+    <string-array name="unlock_options">
+        <item>Unlock with PIN</item>
+        <item>Unlock with Gestures</item>
+        <item>Unlock with Pattern</item>
+    </string-array>
+    <string-array name="timer_window">
+        <item>10 seconds</item>
+        <item>20 seconds</item>
+        <item>30 seconds</item>
+        <item>1 minute</item>
+        <item>2 minutes</item>
+        <item>5 minutes</item>
+    </string-array>
+    <string-array name="timer_window_values">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+        <item>300</item>
+    </string-array>
+
+    <string name="title_activity_reset_unlock_method">Reset Unlock</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="pin_reset">New PIN set. Please use your new PIN to unlock</string>
+    <string name="user_name">user_name</string>
+    <string name="register_complete">register_complete</string>
+    <string name="reset_register_device">Device not registered! With out registering it is not possible to reset the unlock method. Would you like to register now?</string>
+    <string name="info">Info</string>
+    <string name="register">Register</string>
+    <string name="cancel">Cancel</string>
+    <string name="register_ongoing">Registering device . . .</string>
+    <string name="reset_help">To reset unlock method, please go to \nhttp://goo.gl/OFv7UR\nLogin with your Google account and follow the on screen instructions. \n\nEnter the below number when asked</string>
+    <string name="disable_adv_protection">Are you sure want to disable Advanced Protection for Simple AppLock?</string>
+    <string name="welcome_2">Your privacy is protected with Simple AppLock</string>
+    <string name="welcome_3">Your preferred way of unlocking. Set it from Preferences.</string>
+    <string name="title_activity_upgrade">Upgrade</string>
+    <string name="no_ads">Remove Ads \n</string>
+    <string name="adv_prot">Advanced Protection + No Ads\n</string>
+    <string name="title_activity_welcome">Welcome</string>
+    <string name="lock_message_selected_apps">Selected apps locked</string>
+    <string name="please_rate">Rate Simple AppLock</string>
+    <string name="please_rate_message">Thank you for using Simple AppLock. If you like this app, please consider rating it on Google Play.</string>
+    <string name="rate_it">Rate it!</string>
+    <string name="not_interested">Not Interested</string>
+    <string name="may_be_later">May be later</string>
+    <string name="slogan">Your privacy is protected!</string>
+    <string name="adv_prot_not_purchased">Advanced Protection not purchased! Please purchase this from Preferences.</string>
+    <string name="deleted"> deleted</string>
+    <string name="apps_deleted"> apps deleted</string>
+    <string name="select_unlock_method">Select unlock method</string>
+    <string name="retrieve_app_list">Retrieving app list</string>
+    <string name="restore_purchase">Restoring purchases . . .</string>
+    <string name="connect_to_server">Connecting to server . . .</string>
+    <string name="could_not_connect">Could not connect to server! Please try again later.</string>
+    <string name="register_success">Registered successfully! Connecting to server . . .</string>
+    <string name="could_not_register">Could not register device! Please try again later.</string>
+    <string name="processing">Processing . . .</string>
+    <string name="upgrage_on_next_restart">Your upgrades will be loaded the next time Simple AppLock starts</string>
+    <string name="get_details_failed">Could not get details! Please try again later.</string>
+    <string name="could_not_process">Could not process the request. Please try later!</string>
+    <string name="select">Select</string>
+    <string name="reset_unlock">Reset unlock</string>
+    <string name="app_locked_gesture">This app is Locked. Draw gesture to unlock.</string>
+    <string name="draw_gesture">Draw your gesture here</string>
+    <string name="forgot_gesture">Forgot Gesture ?</string>
+    <string name="app_loked_pin">This app is Locked. Please enter PIN to unlock.</string>
+    <string name="forgot_pin">Forgot PIN ?</string>
+    <string name="buy">Buy</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="your_thoughts">Let us know your thoughts</string>
+    <string name="your_queries">If you have any queries or any suggestions for Simple AppLock please let us know at:</string>
+    <string name="delete">Delete</string>
+    <string name="add_new_app">Add new app</string>
+
+</resources>

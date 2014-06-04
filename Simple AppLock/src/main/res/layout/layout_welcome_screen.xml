@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#195893">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        android:layout_weight="8" />
+
+    <ProgressBar
+        android:id="@+id/welcome_page_indicator"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:progressDrawable="@drawable/paging_progress"
+        android:max="4"
+        android:progress="0"
+        android:secondaryProgress="1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_marginBottom="2dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/welcome_button_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/skip"
+            android:textColor="@android:color/white"
+            android:layout_weight="5.0"
+            android:background="@drawable/button_selector_welcome"/>
+        <View
+            android:id="@+id/welcome_button_bar_divider"
+            android:layout_width="1dip"
+            android:background="#000"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="fill_parent"
+            android:padding="0dp"/>
+        <Button
+            android:id="@+id/welcome_button_continue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="@string/next"
+            android:layout_weight="5.0"
+            android:background="@drawable/button_selector_welcome"/>
+    </LinearLayout>
+</LinearLayout>

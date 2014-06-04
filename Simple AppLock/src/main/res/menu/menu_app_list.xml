@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/delete"
+        android:icon="@drawable/ic_action_discard"
+        android:id="@+id/delete_app" />
+    <item
+        android:id="@+id/select_all"
+        android:title="@string/select_all"
+        android:showAsAction="never"
+        />
+
+</menu>
