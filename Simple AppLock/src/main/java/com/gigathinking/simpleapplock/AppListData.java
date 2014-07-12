@@ -111,6 +111,9 @@ public class AppListData {
 
     public Cursor getAppListInfo(){
         String order = COLUMN_APP_NAME + " ASC";
+        if(!mDatabase.isOpen()){
+            init();
+        }
         return mDatabase.query(mTableNameAppList,null,null,null,null,null,order);
     }
 }

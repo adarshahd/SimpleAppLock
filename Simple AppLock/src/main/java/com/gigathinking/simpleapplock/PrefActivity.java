@@ -177,14 +177,16 @@ public class PrefActivity extends PreferenceActivity implements SharedPreference
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {
             case 23:
-                if(mPrefs.getString(AppLockApplication.LOCKTYPE,"").equals(AppLockApplication.LOCKTYPE_PATTERN)){
-                    if((resultCode == LockPatternActivity.RESULT_OK)){
-                        showSelectorDialog();
-                        break;
+                if (resultCode != RESULT_CANCELED) {
+                    if(mPrefs.getString(AppLockApplication.LOCKTYPE,"").equals(AppLockApplication.LOCKTYPE_PATTERN)){
+                        if((resultCode == LockPatternActivity.RESULT_OK)){
+                            showSelectorDialog();
+                            break;
+                        }
                     }
-                }
-                if((resultCode == AppLockApplication.RESULT_OK)){
-                    showSelectorDialog();
+                    if((resultCode == AppLockApplication.RESULT_OK)){
+                        showSelectorDialog();
+                    }
                 }
                 break;
             case 24:

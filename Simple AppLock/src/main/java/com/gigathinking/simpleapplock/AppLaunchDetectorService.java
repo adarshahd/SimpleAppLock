@@ -188,6 +188,15 @@ public class AppLaunchDetectorService extends Service {
                 }
 
                 /*
+                *   Check if activity is being launched from Recent activity button
+                *
+                * */
+
+                if(activityClass.equals("com.android.systemui.recent.RecentsActivity")){
+                    mPrefs.edit().putString(AppLockApplication.LASTAPP,activityClass).commit();
+                }
+
+                /*
                 *   Prevent repeated starting of unlock activity for self and SystemUI
                 * */
 
@@ -204,7 +213,7 @@ public class AppLaunchDetectorService extends Service {
                 *   Detect if the application just unlocked is running. If it is unlock activity should not be started repeatedly.
                 * */
 
-                if(mPrefs.getString(AppLockApplication.LASTAPP,"").equals(activity) || mPrefs.getString(AppLockApplication.LASTAPP,"").equals(activityClass)){
+                if((mPrefs.getString(AppLockApplication.LASTAPP,"").equals(activity) || mPrefs.getString(AppLockApplication.LASTAPP,"").equals(activityClass))){
                     try {
                         Thread.sleep(600L);                 //Let's not hog the CPU
                     } catch (InterruptedException e) {

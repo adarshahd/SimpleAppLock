@@ -85,8 +85,10 @@ public class ResetUnlockMethod extends Activity {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     new Register().execute();
-                    mDialog.setMessage(getString(R.string.register_ongoing));
-                    mDialog.show();
+                    if (mDialog != null) {
+                        mDialog.setMessage(getString(R.string.register_ongoing));
+                        mDialog.show();
+                    }
                     dialog.dismiss();
                 }
             });
@@ -103,8 +105,10 @@ public class ResetUnlockMethod extends Activity {
             });
             builder.create().show();
         } else {
-            mDialog.setMessage(getString(R.string.connect_to_server));
-            mDialog.show();
+            if (mDialog != null) {
+                mDialog.setMessage(getString(R.string.connect_to_server));
+                mDialog.show();
+            }
             new DoRequestReset().execute();
         }
     }
@@ -122,6 +126,15 @@ public class ResetUnlockMethod extends Activity {
         intent.addCategory(Intent.CATEGORY_HOME);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if(mDialog != null){
+            mDialog.dismiss();
+        }
+        mDialog = null;
     }
 
     @Override
@@ -176,7 +189,9 @@ public class ResetUnlockMethod extends Activity {
 
         @Override
         protected void onPostExecute(Integer result) {
-            mDialog.dismiss();
+            if (mDialog != null) {
+                mDialog.dismiss();
+            }
             if(result != 1){
                 Toast.makeText(ResetUnlockMethod.this,getString(R.string.could_not_connect),Toast.LENGTH_SHORT).show();
                 mResetKey = "Error!";
@@ -198,10 +213,14 @@ public class ResetUnlockMethod extends Activity {
         @Override
         protected void onPostExecute(Boolean b) {
             if(b){
-                mDialog.setMessage(getString(R.string.register_success));
+                if (mDialog != null) {
+                    mDialog.setMessage(getString(R.string.register_success));
+                }
                 new DoRequestReset().execute();
             } else {
-                mDialog.dismiss();
+                if (mDialog != null) {
+                    mDialog.dismiss();
+                }
                 Toast.makeText(ResetUnlockMethod.this,getString(R.string.could_not_register),Toast.LENGTH_SHORT).show();
             }
         }

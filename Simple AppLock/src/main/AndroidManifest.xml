@@ -21,21 +21,18 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.Simpleapplock" >
         <activity
-            android:name="com.gigathinking.simpleapplock.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/title_activity_layout_main" >
         </activity>
         <activity
-            android:name="com.gigathinking.simpleapplock.AppPicker"
+            android:name=".AppPicker"
             android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
             android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity android:name=".SetupPINLock" />
+        <activity android:name=".UnlockWithGesture" />
+        <activity android:name=".SetupGestureLock" />
         <activity
-            android:name="com.gigathinking.simpleapplock.SetupPINLock" />
-        <activity
-            android:name="com.gigathinking.simpleapplock.UnlockWithGesture" />
-        <activity
-            android:name="com.gigathinking.simpleapplock.SetupGestureLock" />
-        <activity
-            android:name="com.gigathinking.simpleapplock.PrefActivity"
+            android:name=".PrefActivity"
             android:configChanges="orientation|screenSize|keyboard|keyboardHidden" />
         <activity
             android:name="com.haibison.android.lockpattern.LockPatternActivity"
@@ -43,17 +40,19 @@
             android:theme="@style/Alp.42447968.Theme.Light.DarkActionBar" />
 
         <service
-            android:name="com.gigathinking.simpleapplock.AppLaunchDetectorService"
+            android:name=".AppLaunchDetectorService"
             android:enabled="true"
             android:exported="true" >
         </service>
 
         <activity
-            android:name="com.gigathinking.simpleapplock.UnlockWithPIN" >
+            android:name=".UnlockWithPIN"
+            android:excludeFromRecents="true"
+            android:noHistory="true" >
         </activity>
 
         <receiver
-            android:name="com.gigathinking.simpleapplock.BootReceiver"
+            android:name=".BootReceiver"
             android:enabled="true"
             android:exported="true" >
             <intent-filter>
@@ -62,7 +61,7 @@
         </receiver>
 
         <activity
-            android:name="com.gigathinking.simpleapplock.ResetUnlockMethod"
+            android:name=".ResetUnlockMethod"
             android:label="@string/title_activity_reset_unlock_method" >
         </activity>
         <activity
@@ -70,7 +69,7 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
 
         <receiver
-            android:name="com.gigathinking.simpleapplock.ResetUnlockReceiver"
+            android:name=".ResetUnlockReceiver"
             android:enabled="true"
             android:exported="true"
             android:permission="com.google.android.c2dm.permission.SEND" >
@@ -81,7 +80,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.gigathinking.simpleapplock.AdvancedProtection"
+            android:name=".AdvancedProtection"
             android:description="@string/advanced_protection"
             android:enabled="true"
             android:exported="true"
@@ -100,11 +99,11 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name="com.gigathinking.simpleapplock.Upgrade"
+            android:name=".Upgrade"
             android:label="@string/title_activity_upgrade" >
         </activity>
         <activity
-            android:name="com.gigathinking.simpleapplock.Welcome"
+            android:name=".Welcome"
             android:label="@string/title_activity_layout_main" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -114,6 +113,14 @@
         </activity>
         <activity android:name="com.gigathinking.simpleapplock.About" />
         <meta-data android:name="com.crashlytics.ApiKey" android:value="YOUR KEY"/>
+        <receiver
+            android:name=".PackageUpdateReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

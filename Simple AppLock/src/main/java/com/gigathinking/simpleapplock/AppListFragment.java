@@ -181,7 +181,10 @@ public class AppListFragment extends Fragment implements AdapterView.OnItemClick
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_app_list, container, false);
-        view.findViewById(R.id.btn_add_app).setOnClickListener(this);
+        View btnAddApp = view.findViewById(R.id.btn_add_app);
+        if (btnAddApp != null) {
+            btnAddApp.setOnClickListener(this);
+        }
         return view;
     }
 

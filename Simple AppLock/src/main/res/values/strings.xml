@@ -122,5 +122,6 @@
     <string name="your_queries">If you have any queries or any suggestions for Simple AppLock please let us know at:</string>
     <string name="delete">Delete</string>
     <string name="add_new_app">Add new app</string>
+    <string name="get_started">Get started!</string>
 
 </resources>

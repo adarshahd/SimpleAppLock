@@ -54,7 +54,6 @@ public class ListViewAnimationHelper {
             }
         }
         // Delete the item from the adapter
-        int position = listView.getPositionForView(viewToRemove);
         adapter.notifyDataSetChanged();
 
         final ViewTreeObserver observer = listview.getViewTreeObserver();

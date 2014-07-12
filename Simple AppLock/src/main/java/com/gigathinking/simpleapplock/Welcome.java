@@ -113,13 +113,13 @@ public class Welcome extends FragmentActivity implements ViewPager.OnPageChangeL
             findViewById(R.id.welcome_button_close).setVisibility(View.INVISIBLE);
             findViewById(R.id.welcome_button_close).setLayoutParams(new LinearLayout.LayoutParams(0, 0));
             findViewById(R.id.welcome_button_bar_divider).setVisibility(View.INVISIBLE);
-            ((Button)findViewById(R.id.welcome_button_continue)).setText("Get started!");
+            ((Button)findViewById(R.id.welcome_button_continue)).setText(getString(R.string.get_started));
         } else {
             findViewById(R.id.welcome_button_close).setVisibility(View.VISIBLE);
             findViewById(R.id.welcome_button_close).setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT,5));
             findViewById(R.id.welcome_button_continue).setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 5));
             findViewById(R.id.welcome_button_bar_divider).setVisibility(View.VISIBLE);
-            ((Button)findViewById(R.id.welcome_button_continue)).setText("Next");
+            ((Button)findViewById(R.id.welcome_button_continue)).setText(getString(R.string.next));
         }
     }
 

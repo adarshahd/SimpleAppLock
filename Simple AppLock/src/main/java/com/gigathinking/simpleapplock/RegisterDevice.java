@@ -41,7 +41,8 @@ import java.net.URLEncoder;
 
 public class RegisterDevice {
     public static final String PROPERTY_REG_ID = "registration_id";
-    private static final String GCM_SENDER_ID = "YOUR GCM SENDER ID";
+    public static final String PROPERTY_REG_ID_OLD = "registration_id_old";
+    public static final String GCM_SENDER_ID = "YOUR_REGISTRATION_ID";
     private final String TAG = getClass().getName();
 
     private GoogleCloudMessaging gcm;
@@ -117,10 +118,17 @@ public class RegisterDevice {
         HttpClient client = new DefaultHttpClient(params);
         try
         {
-            String post = ServerInfo.RESET_SERVER + "/register_device.php?user=" + username
-                    + "&deviceid=" +  regID
-                    + "&devicename=" + URLEncoder.encode(device,"utf-8")
-                    + "&version=" + version;
+            String post;
+            if(prefs.getString(RegisterDevice.PROPERTY_REG_ID_OLD,null) == null){
+                post = ServerInfo.RESET_SERVER + "/register_device.php?user=" + username
+                        + "&deviceid=" +  regID
+                        + "&devicename=" + URLEncoder.encode(device,"utf-8")
+                        + "&version=" + version;
+            } else {
+                post = ServerInfo.RESET_SERVER
+                        + "/update_device_id.php?dev_id=" + prefs.getString(PROPERTY_REG_ID_OLD,"")
+                        + "&dev_id_new=" +  prefs.getString(PROPERTY_REG_ID,"");
+            }
             HttpPost httpPost = new HttpPost(post);
             HttpEntity localHttpEntity = client.execute(httpPost).getEntity();
             if (localHttpEntity != null)
@@ -138,6 +146,4 @@ public class RegisterDevice {
         }
         return true;
     }
-
-
 }
